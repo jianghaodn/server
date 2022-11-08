@@ -13,3 +13,6 @@ SpringBoot + Hibernate（正在转为Mybatis实现）
   2、JDK 8+
   
   如果没有maven环境，项目里面自带了maven文件夹，本项目内使用相关命令即可
+  
+  
+默认端口为5000，如果修改端口
