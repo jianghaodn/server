@@ -1,6 +1,5 @@
 package com.project.demo.entity;
 
-
 import java.sql.Timestamp;
 import java.io.Serializable;
 
@@ -8,17 +7,17 @@ import lombok.*;
 
 import javax.persistence.*;
 
-
 /**
  * 文章：用于内容管理系统的文章(Article)表实体类
  *
  * @author xxx
- *@since 202X-XX-XX 
+ * @since 202X-XX-XX
  */
 @Setter
 @Getter
 @Entity
 @IdClass(ArticleId.class)
+@Data
 public class Article implements Serializable {
 
     private static final long serialVersionUID = 974130093549945724L;
@@ -39,7 +38,6 @@ public class Article implements Serializable {
     @Column(name = "type")
     private String type;
 
-
     /**
      * 点击数：[0,1000000000]访问这篇文章的人次
      */
@@ -55,7 +53,6 @@ public class Article implements Serializable {
     @Column(name = "praise_len")
     private Integer praise_len;
 
-
     /**
      * 创建时间：
      */
@@ -63,7 +60,6 @@ public class Article implements Serializable {
     @Basic
     @Column(name = "create_time")
     private Timestamp createTime;
-
 
     /**
      * 更新时间：
@@ -73,7 +69,6 @@ public class Article implements Serializable {
     @Column(name = "update_time")
     private Timestamp updateTime;
 
-
     /**
      * 来源：[0,255]文章的出处
      */
@@ -81,7 +76,6 @@ public class Article implements Serializable {
     @Basic
     @Column(name = "source")
     private String source;
-
 
     /**
      * 来源地址：[0,255]用于跳转到发布该文章的网站
@@ -91,7 +85,6 @@ public class Article implements Serializable {
     @Column(name = "url")
     private String url;
 
-
     /**
      * 标签：[0,255]用于标注文章所属相关内容，多个标签用空格隔开
      */
@@ -99,7 +92,6 @@ public class Article implements Serializable {
     @Basic
     @Column(name = "tag")
     private String tag;
-
 
     /**
      * 正文：文章的主体内容
@@ -109,7 +101,6 @@ public class Article implements Serializable {
     @Column(name = "content")
     private String content;
 
-
     /**
      * 封面图
      */
@@ -117,7 +108,6 @@ public class Article implements Serializable {
     @Basic
     @Column(name = "img")
     private String img;
-
 
     /**
      * 文章描述
@@ -127,12 +117,10 @@ public class Article implements Serializable {
     @Column(name = "description")
     private String description;
 
-
 }
 
-class ArticleId implements Serializable{
+class ArticleId implements Serializable {
 
     private Integer articleId;
     private String title;
 }
-
