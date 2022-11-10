@@ -1,7 +1,7 @@
-package com.project.demo.service;
+package com.project.demo.service1;
 
 import com.project.demo.entity.Praise;
-import com.project.demo.service.base.BaseService;
+import com.project.demo.service1.base.BaseService;
 import org.springframework.stereotype.Service;
 
 /**

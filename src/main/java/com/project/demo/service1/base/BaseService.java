@@ -1,4 +1,4 @@
-package com.project.demo.service.base;
+package com.project.demo.service1.base;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

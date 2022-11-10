@@ -1,7 +1,7 @@
 package com.project.demo.controller;
 
 import com.project.demo.entity.Praise;
-import com.project.demo.service.PraiseService;
+import com.project.demo.service1.PraiseService;
 
 import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;

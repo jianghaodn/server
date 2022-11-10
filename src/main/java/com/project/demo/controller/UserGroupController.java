@@ -1,7 +1,7 @@
 package com.project.demo.controller;
 
 import com.project.demo.entity.UserGroup;
-import com.project.demo.service.UserGroupService;
+import com.project.demo.service1.UserGroupService;
 
 import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;

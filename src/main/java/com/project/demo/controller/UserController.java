@@ -4,9 +4,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.project.demo.entity.AccessToken;
 import com.project.demo.entity.User;
 import com.project.demo.entity.UserGroup;
-import com.project.demo.service.AccessTokenService;
-import com.project.demo.service.UserGroupService;
-import com.project.demo.service.UserService;
+import com.project.demo.service1.AccessTokenService;
+import com.project.demo.service1.UserGroupService;
+import com.project.demo.service1.UserService;
 
 import com.project.demo.controller.base.BaseController;
 import lombok.extern.slf4j.Slf4j;

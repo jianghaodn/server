@@ -1,7 +1,7 @@
 package com.project.demo.controller;
 
 import com.project.demo.entity.AccessToken;
-import com.project.demo.service.AccessTokenService;
+import com.project.demo.service1.AccessTokenService;
 
 import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;

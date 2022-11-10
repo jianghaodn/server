@@ -1,7 +1,7 @@
 package com.project.demo.controller;
 
 import com.project.demo.entity.Auth;
-import com.project.demo.service.AuthService;
+import com.project.demo.service1.AuthService;
 
 import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.project.demo.controller;
 
 import com.project.demo.entity.Upload;
-import com.project.demo.service.UploadService;
+import com.project.demo.service1.UploadService;
 
 import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;

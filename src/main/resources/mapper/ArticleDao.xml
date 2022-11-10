@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.demo.dao.ArticleDao">
+
+    <resultMap type="com.project.demo.entity.Article" id="ArticleMap">
+        <result property="articleId" column="article_id" jdbcType="VARCHAR"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="VARCHAR"/>
+        <result property="hits" column="hits" jdbcType="VARCHAR"/>
+        <result property="praiseLen" column="praise_len" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="source" column="source" jdbcType="VARCHAR"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="tag" column="tag" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="img" column="img" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 批量插入 -->
+    <insert id="insertBatch" keyProperty="articleId" useGeneratedKeys="true">
+        insert into compus_second.article(type, hits, praise_len, create_time, update_time, source, url, tag, content, img, description)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.type}, #{entity.hits}, #{entity.praiseLen}, #{entity.createTime}, #{entity.updateTime}, #{entity.source}, #{entity.url}, #{entity.tag}, #{entity.content}, #{entity.img}, #{entity.description})
+        </foreach>
+    </insert>
+    <!-- 批量插入或按主键更新 -->
+    <insert id="insertOrUpdateBatch" keyProperty="articleId" useGeneratedKeys="true">
+        insert into compus_second.article(type, hits, praise_len, create_time, update_time, source, url, tag, content, img, description)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.type}, #{entity.hits}, #{entity.praiseLen}, #{entity.createTime}, #{entity.updateTime}, #{entity.source}, #{entity.url}, #{entity.tag}, #{entity.content}, #{entity.img}, #{entity.description})
+        </foreach>
+        on duplicate key update
+         type = values(type) , hits = values(hits) , praise_len = values(praise_len) , create_time = values(create_time) , update_time = values(update_time) , source = values(source) , url = values(url) , tag = values(tag) , content = values(content) , img = values(img) , description = values(description)     </insert>
+
+</mapper>
+

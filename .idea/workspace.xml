@@ -7,6 +7,46 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL8" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL8" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL8" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="compus_second: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="fc4d8232-1c6f-412b-a31f-5406c5906029">
+        <node key="compus_second" />
+      </node>
+    </checked>
+    <expanded>
+      <node key="fc4d8232-1c6f-412b-a31f-5406c5906029" />
+    </expanded>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -54,6 +94,29 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.025139665" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="MySQL8: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="MySQL8: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@67e94b7" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -65,7 +128,8 @@
       <option name="presentableId" value="Default" />
       <updated>1668004187607</updated>
       <workItem from="1668004189336" duration="2722000" />
-      <workItem from="1668039933503" duration="696000" />
+      <workItem from="1668039933503" duration="1283000" />
+      <workItem from="1668041961846" duration="4403000" />
     </task>
     <servers />
   </component>
@@ -73,17 +137,53 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-291" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1668004547792">
+    <state x="11" y="97" key="#SQL_Dialects" timestamp="1668045550712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="-291" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1668004547792" />
-    <state x="99" y="175" key="FileChooserDialogImpl" timestamp="1668004339663">
+    <state x="11" y="97" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1668045550712" />
+    <state x="22" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1668045472781">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="99" y="175" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1668004339663" />
+    <state x="22" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1668045472781" />
+    <state x="171" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1668046183629">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="171" y="193" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1668046183629" />
+    <state x="222" y="120" key="ExecutionTargetDialog" timestamp="1668045564784">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="222" y="120" key="ExecutionTargetDialog/0.0.1536.824@0.0.1536.824" timestamp="1668045564784" />
+    <state x="99" y="175" key="FileChooserDialogImpl" timestamp="1668042448102">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="99" y="175" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1668042448102" />
+    <state width="698" height="210" key="GridCell.Tab.0.bottom" timestamp="1668045564794">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="698" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1668045564794" />
+    <state width="698" height="210" key="GridCell.Tab.0.center" timestamp="1668045564794">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="698" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1668045564794" />
+    <state width="698" height="210" key="GridCell.Tab.0.left" timestamp="1668045564794">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="698" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1668045564794" />
+    <state width="698" height="210" key="GridCell.Tab.0.right" timestamp="1668045564794">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="698" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1668045564794" />
+    <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1668045529383">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="212" height="477" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1668045529383" />
     <state x="-240" y="58" key="SettingsEditor" timestamp="1668004356681">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-240" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1668004356681" />
+    <state x="326" y="109" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1668045521645">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="326" y="109" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1536.824@0.0.1536.824" timestamp="1668045521645" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 package com.project.demo.controller;
 
 import com.project.demo.entity.ArticleType;
-import com.project.demo.service.ArticleTypeService;
+import com.project.demo.service1.ArticleTypeService;
 
 import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
