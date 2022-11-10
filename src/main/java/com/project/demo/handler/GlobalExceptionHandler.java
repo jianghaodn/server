@@ -1,5 +1,6 @@
 package com.project.demo.handler;
 
+import org.omg.CORBA.SystemException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -15,4 +16,9 @@ public class GlobalExceptionHandler {
         log.error(e.getMessage());
     }
 
+    @ExceptionHandler(SystemException.class)
+    public  void systemExceptionHandhler(Exception e){
+        log.error("出现了错误");
+        log.error(e.getMessage());
+    }
 }

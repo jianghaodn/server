@@ -1,54 +1,88 @@
 package com.project.demo.controller;
 
-import com.project.demo.service1.OrderInformationService;
-import com.project.demo.controller.base.BaseController;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
+
+
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.api.ApiController;
+import com.baomidou.mybatisplus.extension.api.R;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.project.demo.entity.OrderInformation;
+import com.project.demo.service.OrderInformationService;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.Query;
-import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
-import java.util.Map;
-
+import javax.annotation.Resource;
+import java.io.Serializable;
+import java.util.List;
 
 /**
- *订单信息：(OrderInformation)表控制层
+ * 订单信息(OrderInformation)表控制层
  *
+ * @author makejava
+ * @since 2022-11-10 10:41:00
  */
 @RestController
-@RequestMapping("/order_information")
-public class OrderInformationController extends BaseController<OrderInformation,OrderInformationService> {
+@RequestMapping("orderInformation")
+public class OrderInformationController extends ApiController {
+    /**
+     * 服务对象
+     */
+    @Resource
+    private OrderInformationService orderInformationService;
 
     /**
-     *订单信息对象
+     * 分页查询所有数据
+     *
+     * @param page 分页对象
+     * @param orderInformation 查询实体
+     * @return 所有数据
      */
-    @Autowired
-    public OrderInformationController(OrderInformationService service) {
-        setService(service);
+    @GetMapping
+    public R selectAll(Page<OrderInformation> page, OrderInformation orderInformation) {
+        return success(this.orderInformationService.page(page, new QueryWrapper<>(orderInformation)));
     }
 
-    @PostMapping("/add")
-    @Transactional
-    public Map<String, Object> add(HttpServletRequest request) throws IOException {
-        Map<String,Object> paramMap = service.readBody(request.getReader());
-        this.addMap(paramMap);
-        String sql = "SELECT MAX(order_information_id) AS max FROM "+"order_information";
-        Query select = service.runCountSql(sql);
-        Integer max = (Integer) select.getSingleResult();
-        sql = ("SELECT count(*) count FROM `product_information` INNER JOIN `order_information` ON product_information.trade_name=order_information.trade_name WHERE product_information.merchandise_inventory &#60; order_information.purchase_quantity AND order_information.order_information_id="+max).replaceAll("&#60;","<");
-        select = service.runCountSql(sql);
-        Integer count = Integer.valueOf(String.valueOf(select.getSingleResult()));
-        if(count>0){
-            sql = "delete from "+"order_information"+" WHERE "+"order_information_id"+" ="+max;
-            select = service.runCountSql(sql);
-            select.executeUpdate();
-            return error(30000,"库存不足!");
-        }
-        sql = "UPDATE `product_information` INNER JOIN `order_information` ON product_information.trade_name=order_information.trade_name SET product_information.merchandise_inventory = product_information.merchandise_inventory - order_information.purchase_quantity WHERE order_information.order_information_id="+max;
-        select = service.runCountSql(sql);
-        select.executeUpdate();
-        return success(1);
+    /**
+     * 通过主键查询单条数据
+     *
+     * @param id 主键
+     * @return 单条数据
+     */
+    @GetMapping("{id}")
+    public R selectOne(@PathVariable Serializable id) {
+        return success(this.orderInformationService.getById(id));
     }
 
+    /**
+     * 新增数据
+     *
+     * @param orderInformation 实体对象
+     * @return 新增结果
+     */
+    @PostMapping
+    public R insert(@RequestBody OrderInformation orderInformation) {
+        return success(this.orderInformationService.save(orderInformation));
+    }
+
+    /**
+     * 修改数据
+     *
+     * @param orderInformation 实体对象
+     * @return 修改结果
+     */
+    @PutMapping
+    public R update(@RequestBody OrderInformation orderInformation) {
+        return success(this.orderInformationService.updateById(orderInformation));
+    }
+
+    /**
+     * 删除数据
+     *
+     * @param idList 主键结合
+     * @return 删除结果
+     */
+    @DeleteMapping
+    public R delete(@RequestParam("idList") List<Long> idList) {
+        return success(this.orderInformationService.removeByIds(idList));
+    }
 }
+
