@@ -29,12 +29,12 @@ public class WebAppConfig implements WebMvcConfigurer {
      */
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // 设置允许跨域的路径
-                .allowedOriginPatterns("*")// 设置允许跨域请求的域名
-                .allowCredentials(true)// 设置是否允许cookie
-                .allowedMethods("GET", "POST", "DELETE", "PUT")// 允许的请求方式
-                .allowedHeaders("*")// header属性
-                .maxAge(3600);// 跨域时间
+//        registry.addMapping("/**") // 设置允许跨域的路径
+//                .allowedOriginPatterns("*")// 设置允许跨域请求的域名
+//                .allowCredentials(true)// 设置是否允许cookie
+//                .allowedMethods("GET", "POST", "DELETE", "PUT")// 允许的请求方式
+//                .allowedHeaders("*")// header属性
+//                .maxAge(3600);// 跨域时间
     }
 
     /**
