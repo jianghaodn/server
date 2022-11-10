@@ -1,6 +1,5 @@
 package com.project.demo.controller;
 
-import com.project.demo.entity.Collect;
 import com.project.demo.service1.CollectService;
 
 import com.project.demo.controller.base.BaseController;

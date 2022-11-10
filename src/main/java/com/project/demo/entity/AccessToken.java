@@ -1,73 +1,56 @@
 package com.project.demo.entity;
 
-
-import java.sql.Timestamp;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-
-import lombok.*;
-
-import javax.persistence.*;
-
+import java.util.Date;
+import lombok.Data;
 
 /**
- * 临时访问牌(AccessToken)表实体类
- *
- * @author xxx
- *@since 202X-XX-XX
+ * 临时访问牌
+ * @TableName access_token
  */
-@Setter
-@Getter
-@Entity
+@TableName(value ="access_token")
+@Data
 public class AccessToken implements Serializable {
-
-    private static final long serialVersionUID = 913269304437207500L;
-
     /**
      * 临时访问牌ID
      */
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "token_id")
+    @TableId(type = IdType.AUTO)
     private Integer tokenId;
 
     /**
      * 临时访问牌
      */
-
-    @Basic
-    @Column(name = "token")
     private String token;
+
+    /**
+     * 
+     */
+    private String info;
 
     /**
      * 最大寿命：默认2小时
      */
-
-    @Basic
-    @Column(name = "maxage")
     private Integer maxage;
 
     /**
      * 创建时间：
      */
-
-    @Basic
-    @Column(name = "create_time")
-    private Timestamp createTime;
+    private Date createTime;
 
     /**
      * 更新时间：
      */
-
-    @Basic
-    @Column(name = "update_time")
-    private Timestamp updateTime;
+    private Date updateTime;
 
     /**
-     * 用户信息
+     * 用户编号:
      */
+    private Integer userId;
 
-    @Basic
-    @Column(name = "user_id")
-    private Integer user_id;
-
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

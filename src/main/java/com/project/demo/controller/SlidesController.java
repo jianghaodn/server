@@ -1,6 +1,5 @@
 package com.project.demo.controller;
 
-import com.project.demo.entity.Slides;
 import com.project.demo.service1.SlidesService;
 
 import com.project.demo.controller.base.BaseController;

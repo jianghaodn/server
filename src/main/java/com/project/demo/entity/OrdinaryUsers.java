@@ -1,50 +1,71 @@
 package com.project.demo.entity;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import com.project.demo.entity.base.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import lombok.*;
-import javax.persistence.*;
-
+import java.util.Date;
+import lombok.Data;
 
 /**
- *普通用户：(OrdinaryUsers)表实体类
- *
+ * 普通用户
+ * @TableName ordinary_users
  */
-@Setter
-@Getter
-@Entity(name = "OrdinaryUsers")
+@TableName(value ="ordinary_users")
+@Data
 public class OrdinaryUsers implements Serializable {
+    /**
+     * 普通用户ID
+     */
+    @TableId(type = IdType.AUTO)
+    private Integer ordinaryUsersId;
 
-    //OrdinaryUsers编号
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ordinary_users_id")
-    private Integer ordinary_users_id;
-   // 用户姓名
-   @Basic
-    private String user_name;
-   // 用户性别
-   @Basic
-    private String user_gender;
-   // 用户电话
-   @Basic
-    private String subscriber_telephone;
-   // 用户地址
-   @Basic
-    private String user_address;
-    // 用户编号
-    @Id
-    @Column(name = "user_id")
+    /**
+     * 用户姓名
+     */
+    private String userName;
+
+    /**
+     * 用户性别
+     */
+    private String userGender;
+
+    /**
+     * 用户电话
+     */
+    private String subscriberTelephone;
+
+    /**
+     * 用户地址
+     */
+    private String userAddress;
+
+    /**
+     * 审核状态
+     */
+    private String examineState;
+
+    /**
+     * 智能推荐
+     */
+    private Integer recommend;
+
+    /**
+     * 用户ID
+     */
     private Integer userId;
 
-    // 更新时间
-    @Basic
-    private Timestamp update_time;
+    /**
+     * 创建时间
+     */
+    private Date createTime;
 
-    // 创建时间
-    @Basic
-    private Timestamp create_time;
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
 
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

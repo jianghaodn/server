@@ -1,37 +1,46 @@
 package com.project.demo.entity;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import com.project.demo.entity.base.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import lombok.*;
-import javax.persistence.*;
-
+import java.util.Date;
+import lombok.Data;
 
 /**
- *商品类别：(CommodityCategory)表实体类
- *
+ * 商品类别
+ * @TableName commodity_category
  */
-@Setter
-@Getter
-@Entity(name = "CommodityCategory")
+@TableName(value ="commodity_category")
+@Data
 public class CommodityCategory implements Serializable {
+    /**
+     * 商品类别ID
+     */
+    @TableId(type = IdType.AUTO)
+    private Integer commodityCategoryId;
 
-    //CommodityCategory编号
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "commodity_category_id")
-    private Integer commodity_category_id;
-   // 商品类型
-   @Basic
-    private String commodity_type;
+    /**
+     * 商品类型
+     */
+    private String commodityType;
 
-    // 更新时间
-    @Basic
-    private Timestamp update_time;
+    /**
+     * 智能推荐
+     */
+    private Integer recommend;
 
-    // 创建时间
-    @Basic
-    private Timestamp create_time;
+    /**
+     * 创建时间
+     */
+    private Date createTime;
 
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

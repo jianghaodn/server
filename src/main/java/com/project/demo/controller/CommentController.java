@@ -1,6 +1,5 @@
 package com.project.demo.controller;
 
-import com.project.demo.entity.Comment;
 import com.project.demo.service1.CommentService;
 
 import com.project.demo.controller.base.BaseController;

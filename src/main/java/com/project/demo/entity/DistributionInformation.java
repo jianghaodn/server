@@ -1,55 +1,76 @@
 package com.project.demo.entity;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import com.project.demo.entity.base.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import lombok.*;
-import javax.persistence.*;
-
+import java.util.Date;
+import lombok.Data;
 
 /**
- *配送信息：(DistributionInformation)表实体类
- *
+ * 配送信息
+ * @TableName distribution_information
  */
-@Setter
-@Getter
-@Entity(name = "DistributionInformation")
+@TableName(value ="distribution_information")
+@Data
 public class DistributionInformation implements Serializable {
+    /**
+     * 配送信息ID
+     */
+    @TableId(type = IdType.AUTO)
+    private Integer distributionInformationId;
 
-    //DistributionInformation编号
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "distribution_information_id")
-    private Integer distribution_information_id;
-   // 订单编号
-   @Basic
-    private String order_number;
-   // 用户姓名
-   @Basic
-    private String user_name;
-   // 购买用户
-   @Basic
-    private Integer purchase_user;
-   // 商品名称
-   @Basic
-    private String trade_name;
-   // 物流公司
-   @Basic
-    private String logistics_company;
-   // 发货状态
-   @Basic
-    private String shipment_status;
-   // 签收状态
-   @Basic
-    private String sign_in_status;
+    /**
+     * 订单编号
+     */
+    private String orderNumber;
 
-    // 更新时间
-    @Basic
-    private Timestamp update_time;
+    /**
+     * 用户姓名
+     */
+    private String userName;
 
-    // 创建时间
-    @Basic
-    private Timestamp create_time;
+    /**
+     * 购买用户
+     */
+    private Integer purchaseUser;
 
+    /**
+     * 商品名称
+     */
+    private String tradeName;
+
+    /**
+     * 物流公司
+     */
+    private String logisticsCompany;
+
+    /**
+     * 发货状态
+     */
+    private String shipmentStatus;
+
+    /**
+     * 签收状态
+     */
+    private String signInStatus;
+
+    /**
+     * 智能推荐
+     */
+    private Integer recommend;
+
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

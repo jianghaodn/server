@@ -1,9 +1,6 @@
 package com.project.demo.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.project.demo.entity.AccessToken;
-import com.project.demo.entity.User;
-import com.project.demo.entity.UserGroup;
 import com.project.demo.service1.AccessTokenService;
 import com.project.demo.service1.UserGroupService;
 import com.project.demo.service1.UserService;

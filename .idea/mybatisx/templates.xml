@@ -3,7 +3,145 @@
   <component name="TemplatesSettings">
     <option name="templateConfigs">
       <TemplateContext>
+        <option name="generateConfig">
+          <GenerateConfig>
+            <option name="annotationType" value="MYBATIS_PLUS3" />
+            <option name="basePackage" value="com.project.demo" />
+            <option name="basePath" value="src/main/java" />
+            <option name="encoding" value="UTF-8" />
+            <option name="extraClassSuffix" value="" />
+            <option name="ignoreFieldPrefix" value="" />
+            <option name="ignoreFieldSuffix" value="" />
+            <option name="ignoreTablePrefix" value="" />
+            <option name="ignoreTableSuffix" value="" />
+            <option name="moduleName" value="server1" />
+            <option name="modulePath" value="$PROJECT_DIR$/" />
+            <option name="moduleUIInfoList">
+              <list>
+                <ModuleUIInfo>
+                  <option name="basePath" value="${domain.basePath}" />
+                  <option name="configName" value="mapperInterface" />
+                  <option name="encoding" value="${domain.encoding}" />
+                  <option name="fileName" value="${domain.fileName}Mapper" />
+                  <option name="fileNameWithSuffix" value="${domain.fileName}Mapper.java" />
+                  <option name="modulePath" value="$PROJECT_DIR$/" />
+                  <option name="packageName" value="${domain.basePackage}.mapper" />
+                </ModuleUIInfo>
+                <ModuleUIInfo>
+                  <option name="basePath" value="src/main/resources" />
+                  <option name="configName" value="mapperXml" />
+                  <option name="encoding" value="${domain.encoding}" />
+                  <option name="fileName" value="${domain.fileName}Mapper" />
+                  <option name="fileNameWithSuffix" value="${domain.fileName}Mapper.xml" />
+                  <option name="modulePath" value="$PROJECT_DIR$/" />
+                  <option name="packageName" value="mapper" />
+                </ModuleUIInfo>
+                <ModuleUIInfo>
+                  <option name="basePath" value="${domain.basePath}" />
+                  <option name="configName" value="serviceImpl" />
+                  <option name="encoding" value="${domain.encoding}" />
+                  <option name="fileName" value="${domain.fileName}ServiceImpl" />
+                  <option name="fileNameWithSuffix" value="${domain.fileName}ServiceImpl.java" />
+                  <option name="modulePath" value="$PROJECT_DIR$/" />
+                  <option name="packageName" value="${domain.basePackage}.service.impl" />
+                </ModuleUIInfo>
+                <ModuleUIInfo>
+                  <option name="basePath" value="${domain.basePath}" />
+                  <option name="configName" value="serviceInterface" />
+                  <option name="encoding" value="${domain.encoding}" />
+                  <option name="fileName" value="${domain.fileName}Service" />
+                  <option name="fileNameWithSuffix" value="${domain.fileName}Service.java" />
+                  <option name="modulePath" value="$PROJECT_DIR$/" />
+                  <option name="packageName" value="${domain.basePackage}.service" />
+                </ModuleUIInfo>
+              </list>
+            </option>
+            <option name="needsComment" value="true" />
+            <option name="relativePackage" value="entity" />
+            <option name="superClass" value="" />
+            <option name="tableUIInfoList">
+              <list>
+                <TableUIInfo>
+                  <option name="className" value="AccessToken" />
+                  <option name="tableName" value="access_token" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Article" />
+                  <option name="tableName" value="article" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="ArticleType" />
+                  <option name="tableName" value="article_type" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Collect" />
+                  <option name="tableName" value="collect" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Comment" />
+                  <option name="tableName" value="comment" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="CommodityCategory" />
+                  <option name="tableName" value="commodity_category" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="DistributionInformation" />
+                  <option name="tableName" value="distribution_information" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Hits" />
+                  <option name="tableName" value="hits" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Notice" />
+                  <option name="tableName" value="notice" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="OrderInformation" />
+                  <option name="tableName" value="order_information" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="OrdinaryUsers" />
+                  <option name="tableName" value="ordinary_users" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Praise" />
+                  <option name="tableName" value="praise" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="ProductInformation" />
+                  <option name="tableName" value="product_information" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="ReturnInformation" />
+                  <option name="tableName" value="return_information" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Slides" />
+                  <option name="tableName" value="slides" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="Upload" />
+                  <option name="tableName" value="upload" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="User" />
+                  <option name="tableName" value="user" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="UserGroup" />
+                  <option name="tableName" value="user_group" />
+                </TableUIInfo>
+              </list>
+            </option>
+            <option name="templatesName" value="mybatis-plus3" />
+            <option name="useLombokPlugin" value="true" />
+          </GenerateConfig>
+        </option>
+        <option name="moduleName" value="server1" />
         <option name="projectPath" value="$PROJECT_DIR$" />
+        <option name="templateName" value="mybatis-plus3" />
       </TemplateContext>
     </option>
   </component>

@@ -1,6 +1,5 @@
 package com.project.demo.controller;
 
-import com.project.demo.entity.OrdinaryUsers;
 import com.project.demo.service1.OrdinaryUsersService;
 import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;

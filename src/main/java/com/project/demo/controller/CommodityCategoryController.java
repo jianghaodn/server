@@ -1,6 +1,5 @@
 package com.project.demo.controller;
 
-import com.project.demo.entity.CommodityCategory;
 import com.project.demo.service1.CommodityCategoryService;
 import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;

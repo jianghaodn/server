@@ -1,90 +1,61 @@
 package com.project.demo.entity;
 
-
-import java.sql.Timestamp;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-
-import lombok.*;
-
-import javax.persistence.*;
-
+import java.util.Date;
+import lombok.Data;
 
 /**
- * 点赞：(Praise)表实体类
- *
- * @author xxx
- *@since 202X-XX-XX
+ * 点赞：
+ * @TableName praise
  */
-@Setter
-@Getter
-@Entity
+@TableName(value ="praise")
+@Data
 public class Praise implements Serializable {
-
-    private static final long serialVersionUID = -48157238791857969L;
-
     /**
      * 点赞ID：
      */
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "praise_id")
+    @TableId(type = IdType.AUTO)
     private Integer praiseId;
 
     /**
      * 点赞人：
      */
-
-    @Basic
-    @Column(name = "user_id")
     private Integer userId;
 
     /**
      * 创建时间：
      */
-
-    @Basic
-    @Column(name = "create_time")
-    private Timestamp createTime;
+    private Date createTime;
 
     /**
      * 更新时间：
      */
-
-    @Basic
-    @Column(name = "update_time")
-    private Timestamp updateTime;
+    private Date updateTime;
 
     /**
      * 来源表：
      */
-
-    @Basic
-    @Column(name = "source_table")
     private String sourceTable;
 
     /**
      * 来源字段：
      */
-
-    @Basic
-    @Column(name = "source_field")
     private String sourceField;
 
     /**
      * 来源ID：
      */
-
-    @Basic
-    @Column(name = "source_id")
     private Integer sourceId;
 
     /**
      * 点赞状态:1为点赞，0已取消
      */
+    private Boolean status;
 
-    @Basic
-    @Column(name = "status")
-    private Integer status;
-
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }
-

@@ -1,7 +1,6 @@
 package com.project.demo.controller;
 
 import com.project.demo.controller.base.BaseController;
-import com.project.demo.entity.Hits;
 import com.project.demo.service1.HitsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

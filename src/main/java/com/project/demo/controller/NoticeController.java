@@ -1,6 +1,5 @@
 package com.project.demo.controller;
 
-import com.project.demo.entity.Notice;
 import com.project.demo.service1.NoticeService;
 
 import com.project.demo.controller.base.BaseController;

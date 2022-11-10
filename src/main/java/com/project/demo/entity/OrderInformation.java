@@ -1,68 +1,96 @@
 package com.project.demo.entity;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import com.project.demo.entity.base.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import lombok.*;
-import javax.persistence.*;
-
+import java.util.Date;
+import lombok.Data;
 
 /**
- *订单信息：(OrderInformation)表实体类
- *
+ * 订单信息
+ * @TableName order_information
  */
-@Setter
-@Getter
-@Entity(name = "OrderInformation")
+@TableName(value ="order_information")
+@Data
 public class OrderInformation implements Serializable {
+    /**
+     * 订单信息ID
+     */
+    @TableId(type = IdType.AUTO)
+    private Integer orderInformationId;
 
-    //OrderInformation编号
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "order_information_id")
-    private Integer order_information_id;
-   // 订单编号
-   @Basic
-    private String order_number;
-   // 购买用户
-   @Basic
-    private Integer purchase_user;
-   // 用户姓名
-   @Basic
-    private String user_name;
-   // 用户电话
-   @Basic
-    private String subscriber_telephone;
-   // 用户地址
-   @Basic
-    private String user_address;
-   // 商品名称
-   @Basic
-    private String trade_name;
-   // 商品价钱
-   @Basic
-    private String commodity_price_;
-   // 购买数量
-   @Basic
-    private String purchase_quantity;
-   // 总计
-   @Basic
+    /**
+     * 订单编号
+     */
+    private String orderNumber;
+
+    /**
+     * 购买用户
+     */
+    private Integer purchaseUser;
+
+    /**
+     * 用户姓名
+     */
+    private String userName;
+
+    /**
+     * 用户电话
+     */
+    private String subscriberTelephone;
+
+    /**
+     * 用户地址
+     */
+    private String userAddress;
+
+    /**
+     * 商品名称
+     */
+    private String tradeName;
+
+    /**
+     * 商品价钱
+     */
+    private String commodityPrice;
+
+    /**
+     * 购买数量
+     */
+    private String purchaseQuantity;
+
+    /**
+     * 总计
+     */
     private String total;
-    // 支付状态
-    @Basic
-    private String pay_state;
 
-    // 支付类型: 微信、支付宝、网银
-    @Basic
-    private String pay_type;
+    /**
+     * 支付状态
+     */
+    private String payState;
 
-    // 更新时间
-    @Basic
-    private Timestamp update_time;
+    /**
+     * 支付类型: 微信、支付宝、网银
+     */
+    private String payType;
 
-    // 创建时间
-    @Basic
-    private Timestamp create_time;
+    /**
+     * 智能推荐
+     */
+    private Integer recommend;
 
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

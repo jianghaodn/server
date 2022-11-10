@@ -1,114 +1,76 @@
 package com.project.demo.entity;
 
-
-import java.sql.Timestamp;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-
-import lombok.*;
-
-import javax.persistence.*;
-
+import java.util.Date;
+import lombok.Data;
 
 /**
- * 评论：(Comment)表实体类
- *
- * @author xxx
- *@since 202X-XX-XX
+ * 评论：
+ * @TableName comment
  */
-@Setter
-@Getter
-@Entity
+@TableName(value ="comment")
+@Data
 public class Comment implements Serializable {
-
-    private static final long serialVersionUID = 897384967462600611L;
-
     /**
      * 评论ID：
      */
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "comment_id")
+    @TableId(type = IdType.AUTO)
     private Integer commentId;
 
     /**
      * 评论人ID：
      */
-
-    @Basic
-    @Column(name = "user_id")
     private Integer userId;
 
     /**
      * 回复评论ID：空为0
      */
-
-    @Basic
-    @Column(name = "reply_to_id")
     private Integer replyToId;
 
     /**
      * 内容：
      */
-
-    @Basic
-    @Column(name = "content")
     private String content;
 
     /**
      * 昵称：
      */
-
-    @Basic
-    @Column(name = "nickname")
     private String nickname;
 
     /**
      * 头像地址：[0,255]
      */
-
-    @Basic
-    @Column(name = "avatar")
     private String avatar;
 
     /**
      * 创建时间：
      */
-
-    @Basic
-    @Column(name = "create_time")
-    private Timestamp createTime;
+    private Date createTime;
 
     /**
      * 更新时间：
      */
-
-    @Basic
-    @Column(name = "update_time")
-    private Timestamp updateTime;
+    private Date updateTime;
 
     /**
      * 来源表：
      */
-
-    @Basic
-    @Column(name = "source_table")
     private String sourceTable;
 
     /**
      * 来源字段：
      */
-
-    @Basic
-    @Column(name = "source_field")
     private String sourceField;
 
     /**
      * 来源ID：
      */
-
-    @Basic
-    @Column(name = "source_id")
     private Integer sourceId;
 
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }
-

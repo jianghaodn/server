@@ -1,61 +1,86 @@
 package com.project.demo.entity;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import com.project.demo.entity.base.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import lombok.*;
-import javax.persistence.*;
-
+import java.util.Date;
+import lombok.Data;
 
 /**
- *商品信息：(ProductInformation)表实体类
- *
+ * 商品信息
+ * @TableName product_information
  */
-@Setter
-@Getter
-@Entity(name = "ProductInformation")
+@TableName(value ="product_information")
+@Data
 public class ProductInformation implements Serializable {
+    /**
+     * 商品信息ID
+     */
+    @TableId(type = IdType.AUTO)
+    private Integer productInformationId;
 
-    //ProductInformation编号
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "product_information_id")
-    private Integer product_information_id;
-   // 商品名称
-   @Basic
-    private String trade_name;
-   // 商品封面
-   @Basic
-    private String product_cover;
-   // 商品价钱
-   @Basic
-    private String commodity_price_;
-   // 商品库存
-   @Basic
-    private String merchandise_inventory;
-   // 商品类型
-   @Basic
-    private String commodity_type;
-   // 商品描述
-   @Basic
-    private String product_description;
-   // 商品介绍
-   @Basic
-    private String product_introduction;
-    // 点击数
-    @Basic
+    /**
+     * 商品名称
+     */
+    private String tradeName;
+
+    /**
+     * 商品封面
+     */
+    private String productCover;
+
+    /**
+     * 商品价钱
+     */
+    private String commodityPrice;
+
+    /**
+     * 商品库存
+     */
+    private String merchandiseInventory;
+
+    /**
+     * 商品类型
+     */
+    private String commodityType;
+
+    /**
+     * 商品描述
+     */
+    private String productDescription;
+
+    /**
+     * 商品介绍
+     */
+    private String productIntroduction;
+
+    /**
+     * 点击数
+     */
     private Integer hits;
-    // 点赞数
-    @Basic
-    private Integer praise_len;
 
-    // 更新时间
-    @Basic
-    private Timestamp update_time;
+    /**
+     * 点赞数
+     */
+    private Integer praiseLen;
 
-    // 创建时间
-    @Basic
-    private Timestamp create_time;
+    /**
+     * 智能推荐
+     */
+    private Integer recommend;
 
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

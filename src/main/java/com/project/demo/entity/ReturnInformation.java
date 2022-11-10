@@ -1,58 +1,81 @@
 package com.project.demo.entity;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import com.project.demo.entity.base.BaseEntity;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import lombok.*;
-import javax.persistence.*;
-
+import java.util.Date;
+import lombok.Data;
 
 /**
- *退货信息：(ReturnInformation)表实体类
- *
+ * 退货信息
+ * @TableName return_information
  */
-@Setter
-@Getter
-@Entity(name = "ReturnInformation")
+@TableName(value ="return_information")
+@Data
 public class ReturnInformation implements Serializable {
+    /**
+     * 退货信息ID
+     */
+    @TableId(type = IdType.AUTO)
+    private Integer returnInformationId;
 
-    //ReturnInformation编号
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "return_information_id")
-    private Integer return_information_id;
-   // 订单编号
-   @Basic
-    private String order_number;
-   // 购买用户
-   @Basic
-    private Integer purchase_user;
-   // 用户姓名
-   @Basic
-    private String user_name;
-   // 商品名称
-   @Basic
-    private String trade_name;
-   // 总计
-   @Basic
+    /**
+     * 订单编号
+     */
+    private String orderNumber;
+
+    /**
+     * 购买用户
+     */
+    private Integer purchaseUser;
+
+    /**
+     * 用户姓名
+     */
+    private String userName;
+
+    /**
+     * 商品名称
+     */
+    private String tradeName;
+
+    /**
+     * 总计
+     */
     private String total;
-   // 退货申请
-   @Basic
-    private String return_request_;
-   // 收款账号
-   @Basic
-    private String collection_account_number;
-    // 审核状态
-    @Basic
-    private String examine_state;
 
-    // 更新时间
-    @Basic
-    private Timestamp update_time;
+    /**
+     * 退货申请
+     */
+    private String returnRequest;
 
-    // 创建时间
-    @Basic
-    private Timestamp create_time;
+    /**
+     * 收款账号
+     */
+    private String collectionAccountNumber;
 
+    /**
+     * 审核状态
+     */
+    private String examineState;
+
+    /**
+     * 智能推荐
+     */
+    private Integer recommend;
+
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

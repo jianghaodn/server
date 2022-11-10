@@ -1,6 +1,5 @@
 package com.project.demo.controller;
 
-import com.project.demo.entity.ReturnInformation;
 import com.project.demo.service1.ReturnInformationService;
 import com.project.demo.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
