@@ -4,6 +4,8 @@
  
 SpringBoot + Hibernate（正在转为Mybatis实现）
 
+这个是修改为mybatis实现的，不再是Hibreanate
+
 其他功能正在慢慢加上
 
 环境搭建：
