@@ -3,6 +3,7 @@
         {
             "type": "java",
             "name": "Launch rere",
+<<<<<<< HEAD
             "request": "launch",
             "mainClass": "com.project.demo.rere",
             "projectName": "project-spring_boot"
@@ -10,8 +11,10 @@
         {
             "type": "java",
             "name": "Launch Application",
+=======
+>>>>>>> 0cbccd22d0a76334e23a8e47b613720bbf19c1f3
             "request": "launch",
-            "mainClass": "com.project.demo.Application",
+            "mainClass": "com.project.demo.rere",
             "projectName": "project-spring_boot"
         },
         {

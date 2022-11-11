@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public void exception(Exception e) {
+    public void handler(Exception e) {
         log.error("出现了错误");
         log.error(e.getMessage());
     }
