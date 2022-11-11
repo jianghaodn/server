@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.demo.mapper.OrderInformationMapper">
+
+    <resultMap id="BaseResultMap" type="com.project.demo.entity.OrderInformation">
+            <id property="orderInformationId" column="order_information_id" jdbcType="INTEGER"/>
+            <result property="orderNumber" column="order_number" jdbcType="VARCHAR"/>
+            <result property="purchaseUser" column="purchase_user" jdbcType="INTEGER"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="subscriberTelephone" column="subscriber_telephone" jdbcType="VARCHAR"/>
+            <result property="userAddress" column="user_address" jdbcType="VARCHAR"/>
+            <result property="tradeName" column="trade_name" jdbcType="VARCHAR"/>
+            <result property="commodityPrice" column="commodity_price_" jdbcType="VARCHAR"/>
+            <result property="purchaseQuantity" column="purchase_quantity" jdbcType="VARCHAR"/>
+            <result property="total" column="total" jdbcType="VARCHAR"/>
+            <result property="payState" column="pay_state" jdbcType="VARCHAR"/>
+            <result property="payType" column="pay_type" jdbcType="VARCHAR"/>
+            <result property="recommend" column="recommend" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_information_id,order_number,purchase_user,
+        user_name,subscriber_telephone,user_address,
+        trade_name,commodity_price_,purchase_quantity,
+        total,pay_state,pay_type,
+        recommend,create_time,update_time
+    </sql>
+</mapper>

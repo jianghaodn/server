@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.demo.mapper.DistributionInformationMapper">
+
+    <resultMap id="BaseResultMap" type="com.project.demo.entity.DistributionInformation">
+            <id property="distributionInformationId" column="distribution_information_id" jdbcType="INTEGER"/>
+            <result property="orderNumber" column="order_number" jdbcType="VARCHAR"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="purchaseUser" column="purchase_user" jdbcType="INTEGER"/>
+            <result property="tradeName" column="trade_name" jdbcType="VARCHAR"/>
+            <result property="logisticsCompany" column="logistics_company" jdbcType="VARCHAR"/>
+            <result property="shipmentStatus" column="shipment_status" jdbcType="VARCHAR"/>
+            <result property="signInStatus" column="sign_in_status" jdbcType="VARCHAR"/>
+            <result property="recommend" column="recommend" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        distribution_information_id,order_number,user_name,
+        purchase_user,trade_name,logistics_company,
+        shipment_status,sign_in_status,recommend,
+        create_time,update_time
+    </sql>
+</mapper>
