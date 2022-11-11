@@ -6,13 +6,17 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
+
+import org.apache.ibatis.type.Alias;
+
 import lombok.Data;
 
 /**
  * 临时访问牌
+ * 
  * @TableName access_token
  */
-@TableName(value ="access_token")
+@TableName(value = "access_token")
 @Data
 public class AccessToken implements Serializable {
     /**

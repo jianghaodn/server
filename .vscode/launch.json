@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch rere",
+            "request": "launch",
+            "mainClass": "com.project.demo.rere",
+            "projectName": "project-spring_boot"
+        },
+        {
+            "name": "Java: Current File",
+            "type": "java",
+            "request": "launch",
+            "mainClass": "com.dahaozi.App",
+            "vmArgs": "-Xss256K -Xms5m -Xmx5m -XX:+PrintGCDetails"
+        }
+    ]
+}
